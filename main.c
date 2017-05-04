@@ -191,6 +191,14 @@ void AppCallBack(uint32 event, void* eventParam)
             DBG_PRINTF("CYBLE_EVT_PENDING_FLASH_WRITE\r\n");
             break;
 
+        // 2017-05-04nkf
+        case CYBLE_EVT_GAP_SMP_NEGOTIATED_AUTH_INFO:
+            DBG_PRINTF( "CYBLE_EVT_GAP_SMP_NEGOTIATED_AUTH_INFO\r\n" ) ;
+            break ;
+        case CYBLE_EVT_GATTS_XCNHG_MTU_REQ:
+            DBG_PRINTF( "CYBLE_EVT_GATTS_XCNHG_MTU_REQ\r\n" ) ;
+            break ;
+            
         default:
             DBG_PRINTF("OTHER event: %lx \r\n", event);
 			break;
